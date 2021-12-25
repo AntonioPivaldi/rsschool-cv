@@ -19,4 +19,4 @@ At the moment only have an experience in *medicine*, primarily in *surgery*, can
     - Surgical internship from august 2021 and still lasts;
     - JS/FE Pre-School from 2021.12.13 and still lasts.
 ## 7: English level
-There is no any official certificates to prove my English level, but I'm always trying to do my best.
+There are no any official certificates to prove my English level, but I'm always *trying to do my best*.
