@@ -1,2 +1,3 @@
 # rsschool-cv
-CV task for RS School
+CV HTML & CSS task for RS School
+https://github.com/AntonioPivaldi/rsschool-cv
