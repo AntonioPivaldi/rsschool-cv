@@ -1,2 +1,4 @@
 # rsschool-cv
-CV task for RS School
+CV#2 HTML, CSS & Git Basics:
+
+https://antoniopivaldi.github.io/rsschool-cv
