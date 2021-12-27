@@ -1,4 +1,8 @@
 # rsschool-cv
 CV#1. Markdown & Git task: 
 
-https://github.com/AntonioPivaldi/rsschool-cv/blob/gh-pages/cv.md
+https://antoniopivaldi.github.io/rsschool-cv/cv
+
+CV#2 HTML, CSS & Git Basics:
+
+https://antoniopivaldi.github.io/rsschool-cv
