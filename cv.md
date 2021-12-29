@@ -14,12 +14,13 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
     - Basics in VS Code;
     - Basics in Photoshop;
     - Fundamental skills in medicine.
-## 5: Experience
+## 5: Code sample
+## 6: Experience
 At the moment only have an experience in *medicine*, primarily in *surgery*, can provide a hemorrhoidectomy. In terms of code and programming I had only began to learn.
-## 6: Education:
+## 7: Education:
     - Mid-school from 2003 to 2015;
     - Vitebsk State Medical University from 2015 to 2021;
     - Surgical internship from august 2021 and still lasts;
     - JS/FE Pre-School from 2021.12.13 and still lasts.
-## 7: English level
+## 8: English level
 There are no any official certificates to prove my English level, but I'm always *trying to do my best*.
