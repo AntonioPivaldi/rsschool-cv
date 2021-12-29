@@ -1,3 +1,17 @@
-.newStyle {
-    font-family: Verdana, sans-serif;
+.sideBar {
+    display: flex;
+    position: sticky;
+    width: 10em;
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+    justify-content: flex-start;
+}
+
+.footerFont {
+    font-size: 70%;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.bodyBackground {
+    background-color: rgba(143, 102, 63, 0.2);
 }
