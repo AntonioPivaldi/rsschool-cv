@@ -5,13 +5,30 @@
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.05);
     justify-content: flex-start;
+    align-self: flex-start;
 }
 
 .footerFont {
-    font-size: 70%;
-    color: rgba(0, 0, 0, 0.6)
+    display: flex;
+    position: static;
+    flex-grow: 1;
+    color: rgba(0, 0, 0, 0.6);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .bodyBackground {
     background-color: rgba(143, 102, 63, 0.2);
+}
+.footerSpan {
+    margin-left: 5em;
+}
+.hStyle {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+}
+.mainTextStyle {
+    font-size: 18px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
