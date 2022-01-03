@@ -6,14 +6,17 @@
     - VK: https://vk.com/redrop;
     - Instagram: https://instagram.com/vselenskiy_otets;
     - Discord nickname: Pivaldi#2497.
+
 ## 3: About me
 Well, I'm 23 y. o., finished school in 2015 and entered in medical university in the same year. I enjoy cooking (average cooking enjoyer, ye). I really like to play a *guitar*, watch some *movies* and play *videogames*. My *life goal* is to make a world around me more *advanced* and *improved*, at least a little bit, even though it sounds so maximalistic. I graduated from medical uni and at the moment I'm an *internist*, working at hospital during my internship. Also I'm studying on *JS/FE Pre-School* 2022. 
+
 ## 4: My skills
     - Basics in HTML, CSS;
     - Basics in Git, GitHub;
     - Basics in VS Code;
     - Basics in Photoshop;
     - Fundamental skills in medicine.
+
 ## 5: Code sample
 ## 6: Experience
 At the moment only have an experience in *medicine*, primarily in *surgery*, can provide a hemorrhoidectomy. In terms of code and programming I had only began to learn.
@@ -22,5 +25,6 @@ At the moment only have an experience in *medicine*, primarily in *surgery*, can
     - Vitebsk State Medical University from 2015 to 2021;
     - Surgical internship from august 2021 and still lasts;
     - JS/FE Pre-School from 2021.12.13 and still lasts.
+
 ## 8: English level
 There are no any official certificates to prove my English level, but I'm always *trying to do my best*.
