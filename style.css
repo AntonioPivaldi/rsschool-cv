@@ -20,15 +20,27 @@
 .bodyBackground {
     background-color: rgba(143, 102, 63, 0.2);
 }
+
 .footerSpan {
     margin-left: 5em;
 }
+
 .hStyle {
     font-family: Tahoma, sans-serif;
     text-align: center;
 }
+
 .mainTextStyle {
     font-size: 18px;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.codeStyle {
+    display: block;
+    border: solid rgba(131, 99, 70, 0.25);
+    background-color: rgba(219, 178, 103, 0.3);
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5vw;
 }
