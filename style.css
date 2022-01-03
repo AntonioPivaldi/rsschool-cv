@@ -1,17 +1,26 @@
 .sideBar {
     display: flex;
-    position: sticky;
-    width: 10em;
-    flex-grow: 1;
+    position: fixed;
+    padding-right: 2%;
+    top: 18em;
+    flex-direction: column;
+    align-content: center;
     background-color: rgba(0, 0, 0, 0.05);
     justify-content: flex-start;
     align-self: flex-start;
+    max-width: fit-content;
+    margin-bottom: 10em;
+}
+
+.sideBarContent {
+    font-size: 1em;
 }
 
 .footerFont {
     display: flex;
     position: static;
-    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 1rem;
     color: rgba(0, 0, 0, 0.6);
     justify-content: flex-start;
     align-items: flex-end;
@@ -19,6 +28,8 @@
 
 .bodyBackground {
     background-color: rgba(143, 102, 63, 0.2);
+    max-width: 960px;
+    margin: auto;
 }
 
 .footerSpan {
@@ -40,7 +51,17 @@
     display: block;
     border: solid rgba(131, 99, 70, 0.25);
     background-color: rgba(219, 178, 103, 0.3);
-    margin-left: 10%;
+    padding-right: 5%;
+    margin-left: 20%;
     margin-right: 10%;
-    font-size: 1.5vw;
+    font-size: 1em;
+    min-width: fit-content;
+}
+
+.photoPlace {
+    display: flex;
+    position: static;
+    flex-direction: column; 
+    float: left;
+    box-sizing: content-box;
 }
