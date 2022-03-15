@@ -20,7 +20,7 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
     - Fundamental skills in medicine.
 
 ## 5: Code sample
-
+    Goal of code is to give you a random quote with some effects.
         // Setting variables
         const urlEng = 'https://type.fit/api/quotes';
         const urlRus = require('./assets/packages/quotes-rus.json');
