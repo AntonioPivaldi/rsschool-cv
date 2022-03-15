@@ -10,10 +10,10 @@
     <title>AntonioPivaldi's CV</title>
 </head>
 <body class="bodyBackground">
-    <header>
+    <header id="home">
         <nav class="sideBar">
             <ul class="sideBarContent">
-                <li><a href="#name">Name;</a></li>
+                <li><a href="#home">Name;</a></li>
                 <li><a href="#contacts">Contacts;</a></li>
                 <li><a href="#selfIntro">Introduction;</a></li>
                 <li><a href="#skillz">Skills;</a></li>
@@ -27,7 +27,7 @@
     </header>
     <main>
         <pre class="photoPlace">
-            <img src="assets/photo.jpg" alt="CV photo" width="160" height="240">
+            <img src="assets/photo.jpg" alt="CV photo" width="160" height="300">
         </pre>
         <h1 class="hStyle">Curriculum Vitae</h1>
         <h2 id="name" class="hStyle">Name and surname</h2>
@@ -36,15 +36,16 @@
             <ul class="mainTextStyle">
                 <li>Phone number: +375 29 891-30-03;</li>
                 <li>E-mail: 9212565@gmail.com;</li>
-                <li>VK: https://vk.com/redrop;</li>
-                <li>Instagram: https://instagram.com/vselenskiy_otets;</li>
+                <li><a class="href" href="https://vk.com/redrop">VK</a></li>
+                <li><a class="href" href="https://instagram.com/vselenskiy_otets">Instagram</a></li>
                 <li>Discord nickname: Pivaldi#2497.</li>
             </ul>
         <h2 id="selfIntro" class="hStyle">About me</h2>
         <p class="mainTextStyle">Well, I’m 23 y. o., finished school in 2015 and entered in medical university in the same year.
              I enjoy cooking (average cooking enjoyer, ye). I really like to play a guitar, watch some movies and play videogames.
              My life goal is to make a world around me more advanced and improved, at least a little bit, even though it sounds so maximalistic. 
-             I graduated from medical uni and at the moment I’m an internist, working at hospital during my internship. Also I’m studying on JS/FE Pre-School 2022.</p>
+             I graduated from medical uni and at the moment I’m an internist, working at hospital during my internship. Also I've completed *JS/FE Pre-School* 2022. 
+             Now will try to fight with Stage 1 of *JS/FE 2022Q1*.</p>
         <h2 id="skillz" class="hStyle">My skills:</h2>
             <ul class="mainTextStyle">
                 <li>Basics in HTML, CSS;</li>
@@ -56,56 +57,79 @@
         <h2 id="codeSample" class="hStyle">Code sample</h2>
             <pre class="codeStyle">
                <code>
-                &lt;head>
-                    &lt;meta charset="UTF-8">
-                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    &lt;meta name="author" content="AntonioPivaldi">
-                    &lt;meta name="description" content="First cv in somebody's entire life">
-                    &lt;meta name="viewport" content="width=device-width">
-                    &lt;link rel="stylesheet" href="style.css">
-                    &lt;title>AntonioPivaldi's CV&lt;/title>
-                &lt;/head>
-                &lt;body class="bodyBackground">
-                    &lt;header>
-                        &lt;nav class="sideBar">
-                            &lt;ul>
-                                &lt;li>&lt;a href="#name">Name;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#contacts">Contacts;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#selfIntro">Introduction;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#skillz">Skills;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#codeSample">Code sample;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#xperience">Experience;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#education">Education;&lt;/a>&lt;/li>
-                                &lt;li>&lt;a href="#engLvl">English level.&lt;/a>&lt;/li>
-                            &lt;/ul>
-                        &lt;/nav>
-                    &lt;/header>
-                &lt;/body>  
+                //Goal of code is to give you a random quote with some effects.
+                // Setting variables
+                const urlEng = 'https://type.fit/api/quotes';
+                const urlRus = require('./assets/packages/quotes-rus.json');
+                let buttonSound = document.querySelector('.quoter-button-sound');
+                let quoterText = document.querySelector('.quoter-text');
+                let quoterAuthor = document.querySelector('.quoter-author');
+                let quoterImage = document.querySelector('.quoter-image > img');
+                let engQuote;
+                let rusQuote;
+                let engAuthor;
+                let rusAuthor;
+                buttonSound.src = document.querySelector('.quoter-button-sound').src;
+                buttonSound.load();
+
+                window.newQuote = async () => {
+                    // VFX and SFX
+                    buttonSound.play();
+                    quoterImage.src = document.querySelector('.quoter-image > img').src;
+                    getData();
+                }
+                // Geting quote text
+                async function getData() {
+                    const resEng = await fetch(urlEng);
+                    let dataEng = await resEng.json();
+                    function getText() {
+                        let numberEng = Math.floor(Math.random() * dataEng.length);
+                        let numberRus = Math.floor(Math.random() * urlRus.length);
+                        engQuote = dataEng[numberEng].text;
+                        rusQuote = urlRus[numberRus].text;
+                        engAuthor = dataEng[numberEng].author;
+                        rusAuthor = urlRus[numberRus].author;
+                        if (currentLang === 'eng') {
+                            quoterText.textContent = engQuote;
+                            quoterAuthor.textContent = engAuthor;
+                        }
+                        else {
+                            quoterText.textContent = rusQuote;
+                            quoterAuthor.textContent = rusAuthor;
+                        }
+                    }
+                    getText();
+                }
+                getData();
                 </code> 
             </pre>
         <h2 id="xperience" class="hStyle">Experience</h2>
         <p class="mainTextStyle">
-            At the moment only have an experience in <i>medicine</i>, primarily in <i>surgery</i>, can provide a hemorrhoidectomy. 
-            In terms of code and programming I had only began to learn.
+            At the moment only have real working experience in <i>medicine</i>, primarily in <i>surgery</i>, can provide a hemorrhoidectomy. 
+            In terms of code and programming you may see Projects.
         </p>
         <h2 id="education" class="hStyle">Education:</h2>
             <ul class="mainTextStyle">
                 <li>Mid-school from 2003 to 2015;</li>
                 <li>Vitebsk State Medical University from 2015 to 2021;</li>
                 <li>Surgical internship from august 2021 and still lasts;</li>
-                <li>JS/FE Pre-School from 2021.12.13 and still lasts.</li>
+                <li>JS/FE Pre-School 2021;</li>
+                <li>JS/FE 2022Q1 from 13.03.2022 and still lasts.</li>
             </ul>
         <h2 id="engLvl" class="hStyle">English level</h2>
         <p class="mainTextStyle">There are no any official certificates to prove my English level, but I’m always <i>trying to do my best.</i></p>
         <h2 id="projects" class="hStyle">Projects:</h2>
             <ul class="mainTextStyle">
-                <li><a href="https://antoniopivaldi.github.io/rsschool-cv">My CV project.</a></li>
+                <li><a class="href" href="https://antoniopivaldi-rs-portfolio.netlify.app">Training portfolio;</a></li>
+                <li><a class="href" href="https://antoniopivaldi-rs-audioplayer.netlify.app">JS Audioplayer;</a></li>
+                <li><a class="href" href="https://antoniopivaldi-rs-quotes.netlify.app">JS Quoter;</a></li>
+                <li><a class="href" href="https://antoniopivaldi-rs-portfolio.netlify.app">Unfinished JS/TS Tic-Tac-Toe game collab with &nbsp;</a><a class="href-zidiks" href="https://github.com/zidiks"><i>Zidiks;</i></a></li>
             </ul>
     </main>
     <footer class="footerFont">
-         <a href="https://rs.school/js/"><img src="https://app.rs.school/static/images/logo-rsschool3.png" alt="RS School Logo" width="120" height="60"></a>
-         <span class="footerSpan">Author: <a href="https://github.com/AntonioPivaldi">AntonioPivaldi</a></span>
-         <span class="footerSpan">2022. All rights reserved.</span>
+         <a href="https://rs.school/js/"><img src="https://app.rs.school/static/images/logo-rsschool3.png" alt="RS School Logo" width="120" height="40"></a>
+         <span class="footerSpan">Author: <a class="href" href="https://github.com/AntonioPivaldi">AntonioPivaldi</a></span>
+         <span class="footerSpan">2022</span>
     </footer>
 </body>
 </html>
