@@ -21,48 +21,90 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
 
 ## 5: Code sample
 // Setting variables
+
 const urlEng = 'https://type.fit/api/quotes';
+
 const urlRus = require('./assets/packages/quotes-rus.json');
+
 let buttonSound = document.querySelector('.quoter-button-sound');
+
 let quoterText = document.querySelector('.quoter-text');
+
 let quoterAuthor = document.querySelector('.quoter-author');
+
 let quoterImage = document.querySelector('.quoter-image > img');
+
 let engQuote;
+
 let rusQuote;
+
 let engAuthor;
+
 let rusAuthor;
+
 buttonSound.src = document.querySelector('.quoter-button-sound').src;
+
 buttonSound.load();
 
+
 window.newQuote = async () => {
+
     // VFX and SFX
+
     buttonSound.play();
+
     quoterImage.src = document.querySelector('.quoter-image > img').src;
+
     getData();
+
 }
+
 // Geting quote text
+
 async function getData() {
+
     const resEng = await fetch(urlEng);
+
     let dataEng = await resEng.json();
+
     function getText() {
+
         let numberEng = Math.floor(Math.random() * dataEng.length);
+
         let numberRus = Math.floor(Math.random() * urlRus.length);
+
         engQuote = dataEng[numberEng].text;
+
         rusQuote = urlRus[numberRus].text;
+
         engAuthor = dataEng[numberEng].author;
+
         rusAuthor = urlRus[numberRus].author;
+
         if (currentLang === 'eng') {
+
             quoterText.textContent = engQuote;
+
             quoterAuthor.textContent = engAuthor;
+
         }
+
         else {
+
             quoterText.textContent = rusQuote;
+
             quoterAuthor.textContent = rusAuthor;
+
         }
+
     }
+
     getText();
+
 }
+
 getData();
+
 ## 6: Experience
 - https://antoniopivaldi-rs-portfolio.netlify.app
 - https://antoniopivaldi-rs-audioplayer.netlify.app
