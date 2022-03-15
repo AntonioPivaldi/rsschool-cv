@@ -64,6 +64,7 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
             getText();
         }
         getData();
+        
 ## 6: Experience
 - https://antoniopivaldi-rs-portfolio.netlify.app
 - https://antoniopivaldi-rs-audioplayer.netlify.app
