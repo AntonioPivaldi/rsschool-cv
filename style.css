@@ -1,8 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .sideBar {
     display: flex;
     position: fixed;
     padding-right: 2%;
-    top: 18em;
+    top: 37%;
     flex-direction: column;
     align-content: center;
     background-color: rgba(0, 0, 0, 0.05);
@@ -10,10 +14,45 @@
     align-self: flex-start;
     max-width: fit-content;
     margin-bottom: 10em;
+    border-radius: 10px;
 }
 
-.sideBarContent {
-    font-size: 1em;
+.href {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+.href:hover {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: blue;
+}
+
+.href-zidiks {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+.href-zidiks:hover {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: orangered;
+}
+
+.sideBarContent li a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+.sideBarContent li a:hover {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: blue;
 }
 
 .footerFont {
@@ -22,8 +61,8 @@
     background-color: rgba(0, 0, 0, 0.05);
     padding-top: 1rem;
     color: rgba(0, 0, 0, 0.6);
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .bodyBackground {
@@ -63,5 +102,9 @@
     position: static;
     flex-direction: column; 
     float: left;
-    box-sizing: content-box;
+    border-radius: 30px;
+}
+
+.photoPlace img {
+    border-radius: 10px;
 }
