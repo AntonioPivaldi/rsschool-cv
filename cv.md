@@ -72,6 +72,7 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
 - https://antoniopivaldi-rs-quotes.netlify.app
 - https://antoniopivaldi-rs-tictactoe.netlify.app (unfinished collab with Zidiks)
 - Also at the moment I have an experience in *medicine*, primarily in *surgery*, can provide a hemorrhoidectomy.
+
 ## 7: Education:
     - Mid-school from 2003 to 2015;
     - Vitebsk State Medical University from 2015 to 2021;
