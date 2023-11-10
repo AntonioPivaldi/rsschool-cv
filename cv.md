@@ -21,6 +21,7 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
 
 ## 5: Code sample
     Goal of code is to give you a random quote with some effects.
+    
         // Setting variables
         const urlEng = 'https://type.fit/api/quotes';
         const urlRus = require('./assets/packages/quotes-rus.json');
@@ -41,6 +42,7 @@ Well, I'm 23 y. o., finished school in 2015 and entered in medical university in
             quoterImage.src = document.querySelector('.quoter-image > img').src;
             getData();
         }
+
         // Geting quote text
         async function getData() {
             const resEng = await fetch(urlEng);
