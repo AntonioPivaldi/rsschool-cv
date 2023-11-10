@@ -61,53 +61,50 @@
       </ul>
       <h2 id="codeSample" class="hStyle">Code sample</h2>
       <pre class="codeStyle">
-               <code>
-                //Goal of code is to give you a random quote with some effects.
-                // Setting variables
-                const urlEng = 'https://type.fit/api/quotes';
-                const urlRus = require('./assets/packages/quotes-rus.json');
-                let buttonSound = document.querySelector('.quoter-button-sound');
-                let quoterText = document.querySelector('.quoter-text');
-                let quoterAuthor = document.querySelector('.quoter-author');
-                let quoterImage = document.querySelector('.quoter-image &gt; img');
-                let engQuote;
-                let rusQuote;
-                let engAuthor;
-                let rusAuthor;
-                buttonSound.src = document.querySelector('.quoter-button-sound').src;
-                buttonSound.load();
+        <code>
+          // Goal of code is to give you a random quote with some effects.
+          const urlEng = 'https://type.fit/api/quotes';
+          const urlRus = require('./assets/packages/quotes-rus.json');
+          let buttonSound = document.querySelector('.quoter-button-sound');
+          let quoterText = document.querySelector('.quoter-text');
+          let quoterAuthor = document.querySelector('.quoter-author');
+          let quoterImage = document.querySelector('.quoter-image &gt; img');
+          let engQuote;
+          let rusQuote;
+          let engAuthor;
+          let rusAuthor;
+          buttonSound.src = document.querySelector('.quoter-button-sound').src;
+          buttonSound.load();
 
-                window.newQuote = async () =&gt; {
-                    // VFX and SFX
-                    buttonSound.play();
-                    quoterImage.src = document.querySelector('.quoter-image &gt; img').src;
-                    getData();
+          window.newQuote = async () =&gt; {
+            buttonSound.play();
+            quoterImage.src = document.querySelector('.quoter-image &gt; img').src;
+            getData();
+          }
+          async function getData() {
+            const resEng = await fetch(urlEng);
+            let dataEng = await resEng.json();
+            function getText() {
+              let numberEng = Math.floor(Math.random() * dataEng.length);
+                let numberRus = Math.floor(Math.random() * urlRus.length);
+                engQuote = dataEng[numberEng].text;
+                rusQuote = urlRus[numberRus].text;
+                engAuthor = dataEng[numberEng].author;
+                rusAuthor = urlRus[numberRus].author;
+                if (currentLang === 'eng') {
+                  quoterText.textContent = engQuote;
+                  quoterAuthor.textContent = engAuthor;
                 }
-                // Geting quote text
-                async function getData() {
-                    const resEng = await fetch(urlEng);
-                    let dataEng = await resEng.json();
-                    function getText() {
-                        let numberEng = Math.floor(Math.random() * dataEng.length);
-                        let numberRus = Math.floor(Math.random() * urlRus.length);
-                        engQuote = dataEng[numberEng].text;
-                        rusQuote = urlRus[numberRus].text;
-                        engAuthor = dataEng[numberEng].author;
-                        rusAuthor = urlRus[numberRus].author;
-                        if (currentLang === 'eng') {
-                            quoterText.textContent = engQuote;
-                            quoterAuthor.textContent = engAuthor;
-                        }
-                        else {
-                            quoterText.textContent = rusQuote;
-                            quoterAuthor.textContent = rusAuthor;
-                        }
-                    }
-                    getText();
+                else {
+                  quoterText.textContent = rusQuote;
+                  quoterAuthor.textContent = rusAuthor;
                 }
-                getData();
-                </code> 
-            </pre>
+              }
+            getText();
+          }
+          getData();
+        </code> 
+      </pre>
       <h2 id="xperience" class="hStyle">Experience</h2>
       <p class="mainTextStyle">
         At the moment only have real working experience in <i>medicine</i>, primarily in
