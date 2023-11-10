@@ -69,7 +69,7 @@
                 let buttonSound = document.querySelector('.quoter-button-sound');
                 let quoterText = document.querySelector('.quoter-text');
                 let quoterAuthor = document.querySelector('.quoter-author');
-                let quoterImage = document.querySelector('.quoter-image > img');
+                let quoterImage = document.querySelector('.quoter-image &gt; img');
                 let engQuote;
                 let rusQuote;
                 let engAuthor;
@@ -77,10 +77,10 @@
                 buttonSound.src = document.querySelector('.quoter-button-sound').src;
                 buttonSound.load();
 
-                window.newQuote = async () => {
+                window.newQuote = async () =&gt; {
                     // VFX and SFX
                     buttonSound.play();
-                    quoterImage.src = document.querySelector('.quoter-image > img').src;
+                    quoterImage.src = document.querySelector('.quoter-image &gt; img').src;
                     getData();
                 }
                 // Geting quote text
